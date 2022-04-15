@@ -1,4 +1,5 @@
 import { useState, useContext, useEffect } from "react";
+// import { FaPlus } from "react-icons/fa";
 import Card from "./shared/Card";
 import Button from "./shared/Button";
 import RatingSelect from "./RatingSelect";
@@ -53,16 +54,29 @@ const FeedbackForm = () => {
           <h2>How Would Rate the My-Watch App</h2>
           <RatingSelect select={(rating) => setRating(rating)} />
           <div className="input-group">
-            <input
+            {/* <input */}
+            {/* onChange={handleTextChange} */}
+            {/* type="text" */}
+            {/* placeholder="Write Your Review" */}
+            {/* value={text} */}
+            {/* /> */}
+            <textarea
               onChange={handleTextChange}
               type="text"
               placeholder="Write Your Review"
               value={text}
-            />
+              name=""
+              id=""
+              cols="50"
+              rows="10"
+            ></textarea>
+          </div>
+          <div className="btnDiv">
             <Button type="submit" isDisabled={btnDisabled}>
               Send
             </Button>
           </div>
+
           {message && <div className="message">{message}</div>}
         </form>
       </Card>

@@ -105,6 +105,7 @@ header {
   flex-direction: row;
   border: 1px solid #ccc;
   padding: 8px 10px;
+  word-wrap: break-word;
   border-radius: 8px;
 }
 
@@ -114,7 +115,16 @@ input {
   font-size: 16px;
 }
 
-input:focus {
+/* input:focus {
+  outline: none;
+} */
+
+textarea {
+  border: none;
+  width: 100%;
+}
+
+textarea:focus {
   outline: none;
 }
 
@@ -153,6 +163,11 @@ input:focus {
   width: 100px;
   height: 40px;
   cursor: pointer;
+  margin: 10px;
+}
+
+.btnDiv {
+  text-align: center;
 }
 
 .btn-primary {
@@ -227,4 +242,7 @@ input:focus {
   .input-group input {
     width: 80%;
   }
+  /* .btn {
+    width: 40px;
+  } */
 }
